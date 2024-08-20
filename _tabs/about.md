@@ -3,12 +3,34 @@
 icon: fas fa-info-circle
 order: 4
 ---
- ## Hi, my name is Samir!
+Hi, my name is Samir!
 
 Passionate about data and finance. Keenly studying data analysis, data engineering, machine learning, and financial analytics. 
 Excited to publish projects on GitHub and share ideas with the community. My expertise spans sales planning, forecasting, data analysis, visualization, and employee motivation, all strategically focused on enhancing operational processes and financial outcomes through detailed modeling of products and budgets.
 
 [**Resume: Click to explore my expertise!**](https://docs.google.com/document/d/187Om0MZeYc78C-8DmStuVdlMEt2qGBROpLGOgSFMMtU/edit?usp=sharing)
+
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  th {
+    background-color: #333;
+    color: white;
+  }
+  td {
+    word-break: break-word; /* Перенос слов */
+  }
+  td:nth-child(2) {
+    width: 70%; /* Расширение колонки "Description" */
+  }
+</style>
 
 <h2>PROFESSIONAL FUNCTION</h2>
 <table>
@@ -65,6 +87,7 @@ Excited to publish projects on GitHub and share ideas with the community. My exp
     <td>PyTorch, Sklearn (Scikit-learn), Catboost</td>
   </tr>
 </table>
+
 
 
 
