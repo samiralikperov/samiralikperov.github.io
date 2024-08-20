@@ -56,6 +56,114 @@ FROM
     client;
 ```
 
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>client_id</th>
+      <th>date_of_birth</th>
+      <th>employment_status</th>
+      <th>country</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>1963-07-08</td>
+      <td>unemployed</td>
+      <td>USA</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>1957-02-07</td>
+      <td>unemployed</td>
+      <td>UK</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>1993-02-21</td>
+      <td>employed</td>
+      <td>CA</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>1978-03-19</td>
+      <td>employed</td>
+      <td>CA</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>2000-10-02</td>
+      <td>employed</td>
+      <td>USA</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>295</th>
+      <td>296</td>
+      <td>1963-05-02</td>
+      <td>employed</td>
+      <td>CA</td>
+    </tr>
+    <tr>
+      <th>296</th>
+      <td>297</td>
+      <td>2004-08-25</td>
+      <td>employed</td>
+      <td>UK</td>
+    </tr>
+    <tr>
+      <th>297</th>
+      <td>298</td>
+      <td>1997-08-03</td>
+      <td>unemployed</td>
+      <td>UK</td>
+    </tr>
+    <tr>
+      <th>298</th>
+      <td>299</td>
+      <td>2004-08-16</td>
+      <td>unemployed</td>
+      <td>CA</td>
+    </tr>
+    <tr>
+      <th>299</th>
+      <td>300</td>
+      <td>1965-03-02</td>
+      <td>employed</td>
+      <td>USA</td>
+    </tr>
+  </tbody>
+</table>
+<p>300 rows × 4 columns</p>
+</div>
+
 ## Task 2
 
 You have been told that there was a problem in the backend system as some of the `repayment_channel` values are missing. 
@@ -84,7 +192,124 @@ SELECT
 FROM
 	repayment;
 ```
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>repayment_id</th>
+      <th>loan_id</th>
+      <th>repayment_date</th>
+      <th>repayment_amount</th>
+      <th>repayment_channel</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>357</td>
+      <td>2022-10-16 00:00:00+00:00</td>
+      <td>1675.83</td>
+      <td>bank account</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>805</td>
+      <td>2023-01-12 00:00:00+00:00</td>
+      <td>867.22</td>
+      <td>debit card</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>843</td>
+      <td>2022-06-02 00:00:00+00:00</td>
+      <td>718.83</td>
+      <td>phone</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>243</td>
+      <td>2022-12-26 00:00:00+00:00</td>
+      <td>1620.97</td>
+      <td>credit card</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>991</td>
+      <td>2023-03-18 00:00:00+00:00</td>
+      <td>2182.17</td>
+      <td>phone</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1495</th>
+      <td>1496</td>
+      <td>192</td>
+      <td>2023-02-11 00:00:00+00:00</td>
+      <td>2506.47</td>
+      <td>debit card</td>
+    </tr>
+    <tr>
+      <th>1496</th>
+      <td>1497</td>
+      <td>999</td>
+      <td>2022-11-21 00:00:00+00:00</td>
+      <td>1324.61</td>
+      <td>bank account</td>
+    </tr>
+    <tr>
+      <th>1497</th>
+      <td>1498</td>
+      <td>966</td>
+      <td>2023-01-26 00:00:00+00:00</td>
+      <td>1375.81</td>
+      <td>debit card</td>
+    </tr>
+    <tr>
+      <th>1498</th>
+      <td>1499</td>
+      <td>20</td>
+      <td>2023-03-30 00:00:00+00:00</td>
+      <td>1231.25</td>
+      <td>debit card</td>
+    </tr>
+    <tr>
+      <th>1499</th>
+      <td>1500</td>
+      <td>560</td>
+      <td>2022-04-21 00:00:00+00:00</td>
+      <td>361.11</td>
+      <td>mail</td>
+    </tr>
+  </tbody>
+</table>
+<p>1500 rows × 5 columns</p>
+</div>
 
 ## Task 3
 
@@ -111,7 +336,112 @@ WHERE
     c.country = 'USA'
     AND ct.contract_date >= '2022-01-01';
 ```
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>client_id</th>
+      <th>contract_date</th>
+      <th>principal_amount</th>
+      <th>loan_type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>267</td>
+      <td>2022-03-08 00:00:00+00:00</td>
+      <td>179230</td>
+      <td>personal</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>50</td>
+      <td>2022-01-13 00:00:00+00:00</td>
+      <td>143729</td>
+      <td>mortgage</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>280</td>
+      <td>2022-01-02 00:00:00+00:00</td>
+      <td>171122</td>
+      <td>car</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>79</td>
+      <td>2022-01-24 00:00:00+00:00</td>
+      <td>43784</td>
+      <td>mortgage</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>245</td>
+      <td>2022-01-03 00:00:00+00:00</td>
+      <td>95003</td>
+      <td>mortgage</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>89</th>
+      <td>8</td>
+      <td>2022-01-13 00:00:00+00:00</td>
+      <td>148282</td>
+      <td>personal</td>
+    </tr>
+    <tr>
+      <th>90</th>
+      <td>232</td>
+      <td>2022-02-08 00:00:00+00:00</td>
+      <td>78386</td>
+      <td>personal</td>
+    </tr>
+    <tr>
+      <th>91</th>
+      <td>95</td>
+      <td>2022-03-20 00:00:00+00:00</td>
+      <td>39098</td>
+      <td>personal</td>
+    </tr>
+    <tr>
+      <th>92</th>
+      <td>123</td>
+      <td>2022-03-06 00:00:00+00:00</td>
+      <td>48213</td>
+      <td>car</td>
+    </tr>
+    <tr>
+      <th>93</th>
+      <td>211</td>
+      <td>2022-02-23 00:00:00+00:00</td>
+      <td>147004</td>
+      <td>mortgage</td>
+    </tr>
+  </tbody>
+</table>
+<p>94 rows × 4 columns</p>
+</div>
 
 ## Task 4
 
@@ -133,3 +463,87 @@ JOIN
 GROUP BY l.loan_type, c.country
 ORDER BY l.loan_type, c.country;
 ```
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>loan_type</th>
+      <th>country</th>
+      <th>avg_rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>car</td>
+      <td>CA</td>
+      <td>0.112039</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>car</td>
+      <td>UK</td>
+      <td>0.122613</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>car</td>
+      <td>USA</td>
+      <td>0.103636</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>mortgage</td>
+      <td>CA</td>
+      <td>0.044068</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>mortgage</td>
+      <td>UK</td>
+      <td>0.042281</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>mortgage</td>
+      <td>USA</td>
+      <td>0.043860</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>personal</td>
+      <td>CA</td>
+      <td>0.217253</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>personal</td>
+      <td>UK</td>
+      <td>0.198738</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>personal</td>
+      <td>USA</td>
+      <td>0.202721</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
