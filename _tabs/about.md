@@ -100,7 +100,7 @@ Excited to publish projects on GitHub and share ideas with the community. My exp
   <img src="/assets/img/certif/dc_daa.jpg" alt="DC Data Analysis">
   <img src="/assets/img/certif/dc_dea.jpg" alt="DC DEA">
   <img src="/assets/img/certif/dc_sql.jpg" alt="DC SQL">
-  <img src="/assets/img/certif/dc_bia.jpg" alt="DC BIA">
+  <img src="/assets/img/certif/ma_bia.jpg" alt="DC BIA">
   <img src="/assets/img/certif/ma_dve.jpg" alt="MA DVE">
   <img src="/assets/img/certif/ma_es.jpg" alt="MA ES">
   <img src="/assets/img/certif/ma_ml.jpg" alt="MA ML">
