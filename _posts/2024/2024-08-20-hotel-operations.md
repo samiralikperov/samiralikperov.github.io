@@ -1,4 +1,15 @@
-# Practical Exam: Hotel Operations
+---
+title: Hotel Operations
+date: 2024-08-20 18:00:00
+layout: post
+categories: [SQL,EDA]
+tags: [DATA ANALYSIS,CUSTOMER SERVICE,OPERATIONS MANAGEMENT,BUSINESS ANALYTICS]
+image:
+  path: assets/img/headers/post_2.png
+  alt: Hotel Operations
+---
+
+## Introduction: Hotel Operations
 
 LuxurStay Hotels is a major, international chain of hotels. They offer hotels for both business and leisure travellers in major cities across the world. The chain prides themselves on the level of customer service that they offer. 
 
@@ -10,9 +21,9 @@ You are working with the Head of Operations to identify possible causes and hote
 
 The following schema diagram shows the tables available. You have only been provided with data where customers provided a feedback rating.
 
-![hotel_operations](hotel_operations.png)
+![hotel_operations](/assets/img/pictures/hotel_operations.png)
 
-# Task 1
+## Task 1
 
 Before you can start any analysis, you need to confirm that the data is accurate and reflects what you expect to see. 
 
@@ -194,7 +205,7 @@ FROM (
 
 
 
-# Task 2
+## Task 2
 
 The Head of Operations wants to know whether there is a difference in time taken to respond to a customer request in each hotel. They already know that different services take different lengths of time. 
 
@@ -325,7 +336,7 @@ GROUP BY service_id,
 
 
 
-# Task 3
+## Task 3
 
 The management team want to target improvements in `Meal` and `Laundry` service in Europe (`EMEA`) and Latin America (`LATAM`). 
 
@@ -476,7 +487,7 @@ WHERE 1=1
 
 
 
-# Task 4
+## Task 4
 
 So that you can take a more detailed look at the lowest performing hotels, you want to get service and branch information where the average rating for the branch and service combination is lower than 4.5 - the target set by management.  
 
