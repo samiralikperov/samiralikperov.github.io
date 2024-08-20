@@ -3,13 +3,12 @@
 icon: fas fa-info-circle
 order: 4
 ---
- ### Hi, my name is Samir!
+ ## Hi, my name is Samir!
 
 Passionate about data and finance. Keenly studying data analysis, data engineering, machine learning, and financial analytics. 
 Excited to publish projects on GitHub and share ideas with the community. My expertise spans sales planning, forecasting, data analysis, visualization, and employee motivation, all strategically focused on enhancing operational processes and financial outcomes through detailed modeling of products and budgets.
 
-[**Portfolio: Click for insights!**](https://samiralikperov.github.io/about/)
-
+[**RESUME**]([https://samiralikperov.github.io/about/](https://docs.google.com/document/d/187Om0MZeYc78C-8DmStuVdlMEt2qGBROpLGOgSFMMtU/edit?usp=sharing))
 
 <h2>PROFESSIONAL FUNCTION</h2>
 <table>
@@ -70,7 +69,6 @@ Excited to publish projects on GitHub and share ideas with the community. My exp
 
 
 ##  EDUCATION:
-### Academic Credentials
 - MicroMasters - Georgia Institute of Technology
 - Master's degree - Moscow State University of Economics, Statistics and Informatics
 - Bachelor's degree - The College of the Economy, Insurance and Information Technology
