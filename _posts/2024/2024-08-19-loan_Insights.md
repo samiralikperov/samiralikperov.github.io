@@ -10,7 +10,7 @@ image:
 ---
 
 
-# Practical Exam: Loan Insights
+## Introduction: Loan Insights
 
 EasyLoan offers a wide range of loan services, including personal loans, car loans, and mortgages.
 EasyLoan offers loans to clients from Canada, United Kingdom and United States.
