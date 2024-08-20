@@ -1,6 +1,6 @@
 ---
 title: Loan Insights
-date: 2024-08-19 18:00:00
+date: 2024-08-20 18:00:00
 layout: post
 categories: [SQL,EDA]
 tags: [DATA ANALYSIS,FINANCE,BANK,LOAN]
@@ -18,7 +18,7 @@ The analytics team wants to report performance across different geographic areas
 They need your help to ensure the data is accessible and reliable before they start reporting.
 
 **Database Schema**  
-![lending](/assets/imgs/lending_1.png)
+![lending](/assets/img/pictures/lending_1.png)
 
 ## Task 1 
 
