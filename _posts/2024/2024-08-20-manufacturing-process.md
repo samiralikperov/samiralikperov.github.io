@@ -18,9 +18,14 @@ For this project, you're supporting a team that wants to improve how they monito
 
 This acceptable range is defined by an upper control limit (UCL) and a lower control limit (LCL), the formulas for which are:
 
-$ucl = avg\_height + 3 * \frac{stddev\_height}{\sqrt{5}}$
+$$
+ucl = \text{avg\_height} + 3 \times \frac{\text{stddev\_height}}{\sqrt{5}}
+$$
 
-$lcl = avg\_height - 3 * \frac{stddev\_height}{\sqrt{5}}$
+$$
+lcl = \text{avg\_height} - 3 \times \frac{\text{stddev\_height}}{\sqrt{5}}
+$$
+
 
 The UCL defines the highest acceptable height for the parts, while the LCL defines the lowest acceptable height for the parts. Ideally, parts should fall between the two limits.
 
@@ -35,7 +40,7 @@ The data is available in the `manufacturing_parts` table which has the following
 - `operator`: the operating machine
 
 
-```SQL
+```sql
 WITH calculated_values AS (
     SELECT
         operator,
