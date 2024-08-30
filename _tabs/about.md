@@ -10,51 +10,21 @@ Excited to publish projects on GitHub and share ideas with the community. My exp
 
 [**Resume: Click to explore my expertise!**](https://docs.google.com/document/d/187Om0MZeYc78C-8DmStuVdlMEt2qGBROpLGOgSFMMtU/edit?usp=sharing)
 
-<style>
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-
-  th, td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
-    word-wrap: break-word; /* Перенос текста */
-  }
-
-  th {
-    background-color: #f2f2f2;
-  }
-
-  td {
-    max-width: 300px; /* Установите максимальную ширину для столбца Description */
-  }
-</style>
-
 <h2>PROFESSIONAL FUNCTION</h2>
-<table>
-  <tr>
-    <th>Category</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td><strong>Sales Planning and Forecasting</strong></td>
-    <td><em>Develop accurate and actionable sales forecasts and strategic planning models.</em></td>
-  </tr>
-  <tr>
-    <td><strong>Data Analysis and Visualization</strong></td>
-    <td><em>Transform complex data sets into clear, impactful visualizations using SQL, Python, Tableau, and PowerBI.</em></td>
-  </tr>
-  <tr>
-    <td><strong>Employee Motivation and Engagement</strong></td>
-    <td><em>Implement motivational strategies that enhance performance and align with business objectives.</em></td>
-  </tr>
-  <tr>
-    <td><strong>Financial and Operational Modeling</strong></td>
-    <td><em>Construct sophisticated financial models to support operational planning and performance evaluation.</em></td>
-  </tr>
-</table>
+<ul>
+  <li>
+    <strong>Sales Planning and Forecasting</strong>
+  </li>
+  <li>
+    <strong>Data Analysis and Visualization</strong>
+  </li>
+  <li>
+    <strong>Employee Motivation and Engagement</strong>
+  </li>
+  <li>
+    <strong>Financial and Operational Modeling</strong>
+  </li>
+</ul>
 
 <h2>HARD SKILLS</h2>
 <table>
