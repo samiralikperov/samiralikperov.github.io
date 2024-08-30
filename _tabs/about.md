@@ -15,20 +15,20 @@ Excited to publish projects on GitHub and share ideas with the community. My exp
     width: 100%;
     border-collapse: collapse;
   }
+
   th, td {
+    border: 1px solid #ddd;
     padding: 10px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    word-wrap: break-word; /* Перенос текста */
   }
+
   th {
-    background-color: #333;
-    color: white;
+    background-color: #f2f2f2;
   }
+
   td {
-    word-break: break-word; /* Перенос слов */
-  }
-  td:nth-child(2) {
-    width: 70%; /* Расширение колонки "Description" */
+    max-width: 300px; /* Установите максимальную ширину для столбца Description */
   }
 </style>
 
