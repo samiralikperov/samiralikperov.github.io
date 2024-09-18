@@ -41,15 +41,15 @@ The dataset contains records of customers for their last full year of the loyalt
 | year_added | Nominal. The year the product was first added to FoodYum stock. Missing values should be replaced with 2022. |
 | stock_location | Nominal. The location that stock originates. This can be one of four warehouse locations, A, B, C or D. Missing values should be replaced with “Unknown”. |
 
-## SQL Query to Find Missing Year Added Values
+## **SQL Query for Find Missing Year Added Values**
 
-### **Situation:**
+### Situation:
 In 2022, a bug was discovered in the product system where some products added during the year did not have the `year_added` value set. Since the year a product was added could potentially affect its price, it's crucial to have this information available.
 
-### **Task:**
+### Task:
 We need to write a query that determines how many products have a missing `year_added` value. The query should output a single column named `missing_year` containing the count of rows where the `year_added` is missing (i.e., set to `NULL`).
 
-### **Action:**
+### Action:
 We can achieve this by using the SQL `COUNT` function and filtering the rows where the `year_added` column is `NULL`. The `COUNT` function will count the total number of such rows, and the result will be labeled as `missing_year`.
 
 
@@ -59,7 +59,7 @@ FROM products
 WHERE year_added IS NULL;
 ```
 
-### **Result:**
+### Result:
 The output successfully provided the number of products missing the year_added value.
 
 <div>
@@ -94,19 +94,19 @@ The output successfully provided the number of products missing the year_added v
 
 
 
-## SQL Query for Data Cleaning of the `products` Table
+## **SQL Query for Data Cleaning of the `products` Table**
 
-### **Situation:**
+### Situation:
 I was tasked with ensuring the data in the `products` table is clean and accurate before proceeding with further analysis. The data included missing values in various columns such as `product_type`, `brand`, `weight`, `price`, `average_units_sold`, `year_added`, and `stock_location`, which needed to be replaced based on specific criteria. Additionally, I needed to calculate median values for the `weight` and `price` columns to use as replacements for missing data.
 
-### **Task:**
+### Task:
 My objective was to write an SQL query that would clean the data by handling missing values in accordance with the provided criteria:
 - **Nominal data** (e.g., `product_type`, `brand`, `stock_location`): replace missing values with "Unknown."
 - **Continuous data** (e.g., `weight`, `price`): replace missing values with the overall median.
 - **Discrete data** (e.g., `average_units_sold`): replace missing values with 0.
 - **Year data** (`year_added`): replace missing values with the year 2022.
 
-### **Action:**
+### Action:
 To clean the data, I wrote an SQL query that:
 1. Used **COALESCE** to provide fallback values for columns with missing values.
 2. Replaced missing nominal values with 'Unknown' and replaced missing continuous values (such as `weight` and `price`) with the median values calculated using the **PERCENTILE_CONT** function.
@@ -143,7 +143,7 @@ FROM
     products;
 ```
 
-### **Result:**
+### Result:
 The query successfully cleaned the data in the products table. All missing values were handled appropriately:
 
 Nominal values (e.g., product_type, brand) were replaced with 'Unknown' where missing.
@@ -309,18 +309,18 @@ Missing year_added values were filled with 2022.
 
 
 
-## Finding Minimum and Maximum Prices by Product Type
+## **SQL Query for Finding Minimum and Maximum Prices by Product Type**
 
-### **Situation:**
+### Situation:
 The task involved determining the price range for each product type within the `products` table. Specifically, I needed to calculate both the minimum and maximum prices for each product type, which would allow to see the variation in price within each category of products.
 
-### **Task:**
+### Task:
 I was asked to write an SQL query that would return:
 - The **product_type** (i.e., category of the product).
 - The **min_price** (the minimum price for each product type).
 - The **max_price** (the maximum price for each product type).
 
-### **Action:**
+### Action:
 To solve this, I wrote an SQL query that:
 1. Used the **MIN()** function to find the lowest price for each `product_type`.
 2. Used the **MAX()** function to find the highest price for each `product_type`.
@@ -336,7 +336,7 @@ SELECT
 FROM products 
 GROUP BY product_type;
 ```
-### **Result:**
+### Result:
 The query successfully returned the minimum and maximum prices for each product_type
 
 
@@ -400,18 +400,18 @@ The query successfully returned the minimum and maximum prices for each product_
 
 
 
-## Identifying Meat and Dairy Products with High Sales
+## **SQL Query to Identifying Meat and Dairy Products with High Sales**
 
-### **Situation:**
+### Situation:
 The team wanted to focus on **Meat** and **Dairy** products, particularly those that had an average sales volume greater than 10 units per month. This would help them identify which products in these categories were performing well in terms of sales.
 
-### **Task:**
+### Task:
 I was tasked with writing a query to extract the following details for these high-performing products:
 - **product_id**: The unique identifier for the product.
 - **price**: The price of the product.
 - **average_units_sold**: The average number of units sold per month.
 
-### **Action:**
+### Action:
 To address the task, I created a query that:
 1. Filters the `products` table to include only rows where the `product_type` is either `'Meat'` or `'Dairy'`.
 2. Adds another filter to return only rows where the `average_units_sold` is greater than 10.
@@ -430,7 +430,7 @@ WHERE 1=1
   AND average_units_sold > 10;
 ```
 
-### **Result:**
+### Result:
 The query successfully returned a list of Meat and Dairy products with high sales volume, giving the team valuable insights into which products were performing the best.
 
 
@@ -529,7 +529,7 @@ The query successfully returned a list of Meat and Dairy products with high sale
 <p>698 rows × 3 columns</p>
 </div>
 
-## Summary of Tasks
+## **Summary of Tasks**
 Task 1: Identify Products with Missing Year Information
 I identified products that were missing the year_added field. This information is crucial for analyzing how the year a product was added impacts its pricing.
 
