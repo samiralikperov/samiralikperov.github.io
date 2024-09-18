@@ -9,8 +9,6 @@ image:
   alt: Grocery Store Sales
 ---
 
-## Introduction
-
 As part of my SQL certification journey, I tackled an intriguing challenge with FoodYum, a U.S.-based grocery store chain. FoodYum offers a wide range of products—from fresh produce and meat to dairy, baked goods, snacks, and other household staples. With the rising costs of food, the challenge for FoodYum is to strategically manage their inventory. They aim to stock products in every category across various price ranges to accommodate a diverse customer base.
 
 To learn more about me and my work, expand the ABOUT ME section.
