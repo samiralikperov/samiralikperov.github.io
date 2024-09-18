@@ -9,25 +9,14 @@ image:
   alt: Grocery Store Sales
 ---
 <details>
-  <summary style="font-size: 24px; font-weight: bold; text-align: center; cursor: pointer;">ABOUT ME</summary>
+  <summary style="font-size: 24px; font-weight: bold; cursor: pointer;">ABOUT ME</summary>
   
-  <div style="text-align: center; margin-top: 20px;">
-    <p style="font-size: 18px; margin-bottom: 30px;">
-     Learn more about me on my <a href="https://samiralikperov.github.io/about/">ABOUT</a> page. Below, you can find links to explore more of my projects categorized by topics, access my resume, and contact me.
-    </p>
+  Learn more about me on my [ABOUT](https://samiralikperov.github.io/about/) page. Below, you can find links to explore more of my projects categorized by topics, access my resume, and contact me.
 
-   <div style="display: inline-flex; gap: 20px; margin-top: 20px;">
-    <a href="https://samiralikperov.github.io/categories/" style="display: inline-block; z-index: 1;">
-      <img src="https://img.shields.io/badge/-PROJECTS-090909?style=for-the-badge" style="transform: scale(1.5);" alt="Link to Projects">
-    </a>
-    <a href="https://docs.google.com/document/d/1BEL5l5ZnlTdJc5OKiuH1SkiMQf6hS6HRAZUZvlrRANM/edit#heading=h.ifsro82jsgea" style="display: inline-block; z-index: 1;">
-      <img src="https://img.shields.io/badge/-RESUME-090909?style=for-the-badge" style="transform: scale(1.5);" alt="Link to Resume">
-    </a>
-    <a href="https://www.linkedin.com/in/samiralikperov/" style="display: inline-block; z-index: 1;">
-      <img src="https://img.shields.io/badge/-CONTACT-090909?style=for-the-badge" style="transform: scale(1.5);" alt="Link to Contact">
-    </a>
-  </div>
-</div>
+  [![Projects](https://img.shields.io/badge/-PROJECTS-090909?style=for-the-badge)](https://samiralikperov.github.io/categories/)
+  [![Resume](https://img.shields.io/badge/-RESUME-090909?style=for-the-badge)](https://docs.google.com/document/d/1BEL5l5ZnlTdJc5OKiuH1SkiMQf6hS6HRAZUZvlrRANM/edit#heading=h.ifsro82jsgea)
+  [![Contact](https://img.shields.io/badge/-CONTACT-090909?style=for-the-badge)](https://www.linkedin.com/in/samiralikperov/)
+  
 </details>
 
 
