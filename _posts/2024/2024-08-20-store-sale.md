@@ -22,8 +22,9 @@ As food costs rise, FoodYum wants to make sure it keeps stocking products in all
   
   Learn more about me on my [ABOUT](https://samiralikperov.github.io/about/) page. Below, you can find links to explore more of my projects categorized by topics, access my resume, and contact me.
 
-  | [PROJECTS](https://samiralikperov.github.io/categories/) | [RESUME](https://docs.google.com/document/d/1BEL5l5ZnlTdJc5OKiuH1SkiMQf6hS6HRAZUZvlrRANM/edit#heading=h.ifsro82jsgea) | [CONTACT](https://www.linkedin.com/in/samiralikperov/) |
-|---|---|---|
+[**PROJECTS**](https://samiralikperov.github.io/categories/)  
+[**RESUME**](https://docs.google.com/document/d/1BEL5l5ZnlTdJc5OKiuH1SkiMQf6hS6HRAZUZvlrRANM/edit#heading=h.ifsro82jsgea)  
+[**CONTACT**](https://www.linkedin.com/in/samiralikperov/)
 
 </details>
 
