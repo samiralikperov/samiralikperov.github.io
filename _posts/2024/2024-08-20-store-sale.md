@@ -2,14 +2,34 @@
 title: Grocery Store Sales
 date: 2024-08-20 18:00:00
 layout: post
-categories: [SQL,EDA]
-tags: [DATA ANALYSIS,SALES]
+categories: [SQL]
+tags: [DATA ANALYSIS,SALES ANALYSIS]
 image:
   path: assets/img/headers/post_4.png
   alt: Grocery Store Sales
 ---
+## ABOUT ME
 
-## Practical Exam: Grocery Store Sales
+<div style="text-align: center; margin-top: 20px;">
+  <p style="font-size: 18px; margin-bottom: 30px;">
+    I am a data analyst. Learn more about me on my <a href="https://samiralikperov.github.io/about/">About</a> page. Below, you can find links to explore more of my projects categorized by topics, access my resume, and contact me.
+  </p>
+
+  <div style="display: inline-flex; gap: 20px; margin-top: 20px;">
+    <a href="https://samiralikperov.github.io/categories/">
+      <img src="https://img.shields.io/badge/-PROJECTS-090909?style=for-the-badge" style="transform: scale(1.5);">
+    </a>
+    <a href="https://docs.google.com/document/d/1BEL5l5ZnlTdJc5OKiuH1SkiMQf6hS6HRAZUZvlrRANM/edit#heading=h.ifsro82jsgea">
+      <img src="https://img.shields.io/badge/-RESUME-090909?style=for-the-badge" style="transform: scale(1.5);">
+    </a>
+    <a href="https://www.linkedin.com/in/samiralikperov/">
+      <img src="https://img.shields.io/badge/-CONTACT-090909?style=for-the-badge" style="transform: scale(1.5);">
+    </a>
+  </div>
+</div>
+
+
+## SQL Progect: Grocery Store Sales
 
 FoodYum is a grocery store chain that is based in the United States.
 
