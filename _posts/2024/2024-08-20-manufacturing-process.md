@@ -2,19 +2,14 @@
 title: Manufacturing processes
 date: 2024-08-20 18:00:00
 layout: post
-categories: [SQL,EDA]
-tags: [DATA ANALYSIS,BUSINESS PROCESS]
+categories: [SQL]
+tags: [DATA ANALYSIS,BUSINESS PROCESS, MANUFACTURING]
 image:
   path: assets/img/headers/post_3.png
   alt: Manufacturing processes
 ---
 
-
-## Manufacturing processes
-
-Manufacturing processes for any product is like putting together a puzzle. Products are pieced together step by step, and keeping a close eye on the process is important.
-
-For this project, you're supporting a team that wants to improve how they monitor and control a manufacturing process. The goal is to implement a more methodical approach known as statistical process control (SPC). SPC is an established strategy that uses data to determine whether the process works well. Processes are only adjusted if measurements fall outside of an acceptable range. 
+For this project, the goal is to support a team aiming to enhance their control and monitoring of a manufacturing process. This involves implementing Statistical Process Control (SPC), a data-driven methodology to ensure product quality and consistent manufacturing performance. The task is to analyze historical data and use SQL queries to calculate control limits—upper control limit (UCL) and lower control limit (LCL)—to identify any anomalies in the process that require attention.
 
 This acceptable range is defined by an upper control limit (UCL) and a lower control limit (LCL), the formulas for which are:
 
@@ -22,9 +17,22 @@ This acceptable range is defined by an upper control limit (UCL) and a lower con
 
 The UCL defines the highest acceptable height for the parts, while the LCL defines the lowest acceptable height for the parts. Ideally, parts should fall between the two limits.
 
-Using SQL window functions and nested queries, you'll analyze historical manufacturing data to define this acceptable range and identify any points in the process that fall outside of the range and therefore require adjustments. This will ensure a smooth running manufacturing process consistently making high-quality products.
+To learn more about me and my work, expand the ABOUT ME section.
 
-## The data
+<details>
+  <summary style="font-size: 24px; font-weight: bold; cursor: pointer;">ABOUT ME</summary>
+  
+  Learn more about me on my <a href="https://samiralikperov.github.io/about/" target="_blank">ABOUT</a> page. Below, you can find links to explore more of my projects categorized by topics, access my resume, and contact me.
+
+  <br>
+
+  | <a href="https://samiralikperov.github.io/categories/" target="_blank"><strong>PROJECTS</strong></a> | <a href="https://docs.google.com/document/d/1BEL5l5ZnlTdJc5OKiuH1SkiMQf6hS6HRAZUZvlrRANM/edit#heading=h.ifsro82jsgea" target="_blank"><strong>RESUME</strong></a> | <a href="https://www.linkedin.com/in/samiralikperov/" target="_blank"><strong>CONTACT</strong></a> |
+</details>
+
+## **Analyzing Manufacturing Process for SPC Implementation**
+
+### **Situation:**
+The team in charge of a manufacturing process wants to improve the way they monitor and control their workflow. They plan to introduce Statistical Process Control (SPC) to ensure that product quality remains consistent. The goal is to identify any anomalies in the product measurements (specifically height) that may require process adjustments.
 The data is available in the `manufacturing_parts` table which has the following fields:
 - `item_no`: the item number
 - `length`: the length of the item made
@@ -32,6 +40,16 @@ The data is available in the `manufacturing_parts` table which has the following
 - `height`: the height of the item made
 - `operator`: the operating machine
 
+### **Task:**
+I was tasked with analyzing the historical manufacturing data using SQL to calculate the Upper Control Limit (UCL) and Lower Control Limit (LCL) based on height measurements. By applying these limits, I was responsible for determining if any items in the process fall outside the acceptable range and require attention.
+
+### **Action:**
+1. I created a SQL query to calculate the **average height** and **standard deviation** of height for each product, using **window functions** to capture measurements over a sliding window of 5 items.
+2. I applied formulas to calculate the **Upper Control Limit (UCL)** and **Lower Control Limit (LCL)** for each group of 5 products.
+3. I flagged any items where the height fell outside these control limits (greater than UCL or less than LCL) using a **CASE** statement.
+4. I utilized SQL’s **nested queries** and **window functions** to handle the data efficiently and filter results for further analysis.
+
+Here’s the SQL query used for this analysis:
 
 ```sql
 WITH calculated_values AS (
@@ -92,8 +110,8 @@ ORDER BY
     item_no;
 ```
 
-
-
+### **Result:**
+The query successfully calculated the control limits for each batch of 5 items and identified any items that exceeded the Upper Control Limit (UCL) or fell below the Lower Control Limit (LCL). This allowed the team to pinpoint which steps in the process require adjustments to ensure product quality remains within acceptable bounds.
 
 <div>
 <style scoped>
@@ -249,3 +267,7 @@ ORDER BY
 </table>
 <p>420 rows × 8 columns</p>
 </div>
+
+
+## **Summary of Project**
+This project focuses on monitoring and controlling a manufacturing process using Statistical Process Control (SPC). By applying SQL window functions and nested queries, I calculated the Upper Control Limit (UCL) and Lower Control Limit (LCL) for part measurements. The goal was to identify any deviations from the acceptable range to ensure high-quality production. Alerts were generated for parts exceeding the control limits, providing valuable insights for maintaining smooth and efficient manufacturing operations.
