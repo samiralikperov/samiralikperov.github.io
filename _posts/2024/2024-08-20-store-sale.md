@@ -8,16 +8,6 @@ image:
   path: assets/img/headers/post_4.png
   alt: Grocery Store Sales
 ---
-<details>
-  <summary style="font-size: 24px; font-weight: bold; cursor: pointer;">ABOUT ME</summary>
-  
-  Learn more about me on my [ABOUT](https://samiralikperov.github.io/about/) page. Below, you can find links to explore more of my projects categorized by topics, access my resume, and contact me.
-
-  | [PROJECTS](https://samiralikperov.github.io/categories/) | [RESUME](https://docs.google.com/document/d/1BEL5l5ZnlTdJc5OKiuH1SkiMQf6hS6HRAZUZvlrRANM/edit#heading=h.ifsro82jsgea) | [CONTACT](https://www.linkedin.com/in/samiralikperov/) |
-
-</details>
-
-
 
 ## SQL Progect: Grocery Store Sales
 
@@ -26,6 +16,16 @@ FoodYum is a grocery store chain that is based in the United States.
 FoodYum sells items such as produce, meat, dairy, baked goods, snacks, and other household food staples.
 
 As food costs rise, FoodYum wants to make sure it keeps stocking products in all categories that cover a range of prices to ensure they have stock for a broad range of customers. 
+
+<details>
+  <summary style="font-size: 24px; font-weight: bold; cursor: pointer;">ABOUT ME</summary>
+  
+  Learn more about me on my [ABOUT](https://samiralikperov.github.io/about/) page. Below, you can find links to explore more of my projects categorized by topics, access my resume, and contact me.
+
+  | [PROJECTS](https://samiralikperov.github.io/categories/) | [RESUME](https://docs.google.com/document/d/1BEL5l5ZnlTdJc5OKiuH1SkiMQf6hS6HRAZUZvlrRANM/edit#heading=h.ifsro82jsgea) | [CONTACT](https://www.linkedin.com/in/samiralikperov/) |
+|---|---|---|
+
+</details>
 
 ## Data
 
