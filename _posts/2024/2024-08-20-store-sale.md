@@ -9,18 +9,18 @@ image:
   alt: Grocery Store Sales
 ---
 
-## SQL Progect: Grocery Store Sales
+## Introduction
 
-FoodYum is a grocery store chain that is based in the United States.
+As part of my SQL certification journey, I tackled an intriguing challenge with FoodYum, a U.S.-based grocery store chain. FoodYum offers a wide range of products—from fresh produce and meat to dairy, baked goods, snacks, and other household staples. With the rising costs of food, the challenge for FoodYum is to strategically manage their inventory. They aim to stock products in every category across various price ranges to accommodate a diverse customer base.
 
-FoodYum sells items such as produce, meat, dairy, baked goods, snacks, and other household food staples.
-
-As food costs rise, FoodYum wants to make sure it keeps stocking products in all categories that cover a range of prices to ensure they have stock for a broad range of customers. 
+To learn more about me and my work, expand the ABOUT ME section.
 
 <details>
   <summary style="font-size: 24px; font-weight: bold; cursor: pointer;">ABOUT ME</summary>
   
-  Learn more about me on my <a href="https://samiralikperov.github.io/about/" target="_blank">ABOUT</a> page. Below, you can find links to explore more of my projects categorized by topics, access my resume, and contact me.  
+  Learn more about me on my <a href="https://samiralikperov.github.io/about/" target="_blank">ABOUT</a> page. Below, you can find links to explore more of my projects categorized by topics, access my resume, and contact me.
+
+  <br>
 
   | <a href="https://samiralikperov.github.io/categories/" target="_blank"><strong>PROJECTS</strong></a> | <a href="https://docs.google.com/document/d/1BEL5l5ZnlTdJc5OKiuH1SkiMQf6hS6HRAZUZvlrRANM/edit#heading=h.ifsro82jsgea" target="_blank"><strong>RESUME</strong></a> | <a href="https://www.linkedin.com/in/samiralikperov/" target="_blank"><strong>CONTACT</strong></a> |
 </details>
