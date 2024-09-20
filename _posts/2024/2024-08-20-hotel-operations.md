@@ -1,21 +1,29 @@
 ---
 title: Hotel Operations
-date: 2024-08-20 18:00:00
+date: 2024-08-27 18:00:00
 layout: post
-categories: [SQL,EDA]
-tags: [DATA ANALYSIS,CUSTOMER SERVICE,OPERATIONS MANAGEMENT,BUSINESS ANALYTICS]
+categories: [SQL]
+tags: [DATA ANALYSIS,OPERATIONS MANAGEMENT]
 image:
   path: assets/img/headers/post_2.png
   alt: Hotel Operations
 ---
 
-## Introduction: Hotel Operations
+For this project, LuxurStay Hotels, a major international hotel chain catering to both business and leisure travelers, has always taken pride in their high level of customer service. However, recently there has been a rise in complaints about slow room service at certain branches, which has led to a drop in customer satisfaction ratings. The management, aiming to maintain their expected 4.5 rating, has raised this issue as a priority.
 
-LuxurStay Hotels is a major, international chain of hotels. They offer hotels for both business and leisure travellers in major cities across the world. The chain prides themselves on the level of customer service that they offer. 
+I'm currently collaborating with the Head of Operations to investigate the potential causes of these delays and identify which hotel branches are experiencing the most significant problems.
 
-However, the management has been receiving complaints about slow room service in some hotel branches. As these complaints are impacting the customer satisfaction rates, it has become a serious issue. Recent data shows that customer satisfaction has dropped from the 4.5 rating that they expect. 
+To learn more about me and my work, expand the ABOUT ME section.
 
-You are working with the Head of Operations to identify possible causes and hotel branches with the worst problems. 
+<details>
+  <summary style="font-size: 24px; font-weight: bold; cursor: pointer;">ABOUT ME</summary>
+  
+  Learn more about me on my <a href="https://samiralikperov.github.io/about/" target="_blank">ABOUT</a> page. Below, you can find links to explore more of my projects categorized by topics, access my resume, and contact me.
+
+  <br>
+
+  | <a href="https://samiralikperov.github.io/categories/" target="_blank"><strong>PROJECTS</strong></a> | <a href="https://docs.google.com/document/d/1BEL5l5ZnlTdJc5OKiuH1SkiMQf6hS6HRAZUZvlrRANM/edit#heading=h.ifsro82jsgea" target="_blank"><strong>RESUME</strong></a> | <a href="https://www.linkedin.com/in/samiralikperov/" target="_blank"><strong>CONTACT</strong></a> |
+</details>
 
 ## Data
 
@@ -23,26 +31,30 @@ The following schema diagram shows the tables available. You have only been prov
 
 ![hotel_operations](/assets/img/pictures/hotel_operations.png)
 
-## Task 1
+## **Cleaning the Hotel Branch Data**
 
-Before you can start any analysis, you need to confirm that the data is accurate and reflects what you expect to see. 
+### Situation:
+The management of LuxurStay Hotels is concerned about customer complaints regarding room service delays. To begin analyzing the data and pinpoint the branches with the worst problems, I was asked to ensure that the data in the branch table is accurate and matches the description provided by the data team.
 
-It is known that there are some issues with the `branch` table, and the data team have provided the following data description. 
+### Task:
+My task was to write a query that meets the following criteria:
 
-Write a query to return data matching this description. You must match all column names and description criteria.
+Each hotel should have a valid identifier (id), and no values should be missing.
+The location column should only contain four valid categories, with missing values replaced by “Unknown.”
+The number of rooms in each hotel (total_rooms) must be a positive integer between 1 and 400, with any missing values defaulted to 100.
+The number of staff employed in the hotel’s service department (staff_count) should reflect a ratio of 1.5 staff per room.
+The opening_date should be between 2000 and 2023, with missing values defaulted to 2023.
+The target_guests should be labeled as either "Leisure" or "Business," with missing values set to "Leisure."
 
-| Column Name | Criteria                                                |
-|-------------|---------------------------------------------------------|
-|id | Nominal. The unique identifier of the hotel. </br>Missing values are not possible due to the database structure.|
-| location | Nominal. The location of the particular hotel. One of four possible values, 'EMEA', 'NA', 'LATAM' and 'APAC'. </br>Missing values should be replaced with “Unknown”. |
-| total_rooms | Discrete. The total number of rooms in the hotel. Must be a positive integer between 1 and 400. </br>Missing values should be replaced with the default number of rooms, 100. |
-| staff_count | Discrete. The number of staff employeed in the hotel service department. </br>Missing values should be replaced with the total_rooms multiplied by 1.5. |
-| opening_date | Discrete. The year in which the hotel opened. This can be any value between 2000 and 2023. </br>Missing values should be replaced with 2023. |
-| target_guests | Nominal. The primary type of guest that is expected to use the hotel. Can be one of 'Leisure' or 'Business'. </br>Missing values should be replaced with 'Leisure'. |
+### Action:
+To clean and ensure the data is accurate:
+I wrote a query that retrieved all columns from the branch table.
+I used conditional logic (CASE statements) to replace any missing or invalid values according to the provided data description.
+For staff_count, I calculated the correct value by multiplying the total_rooms by 1.5 in case of missing data.
 
+Here’s the query:
 
-```python
--- Write your query for task 1 in this cell
+```sql
 SELECT
 	id,
 	COALESCE(TRIM(location), 'Unknown') as location,
@@ -66,11 +78,9 @@ FROM (
     FROM 
         branch
 ) AS processed_branch;
-	
 ```
-
-
-
+### Result:
+The query successfully returned cleaned data that adhered to the data team's description, making it ready for further analysis. This ensures that any further investigation into the room service delays is based on accurate and reliable data.
 
 <div>
 <style scoped>
@@ -205,15 +215,29 @@ FROM (
 
 
 
-## Task 2
+## **Analyzing Response Times Across Hotel Branches**
 
-The Head of Operations wants to know whether there is a difference in time taken to respond to a customer request in each hotel. They already know that different services take different lengths of time. 
+### Situation:
+The Head of Operations at LuxurStay Hotels suspects that different branches may take varying amounts of time to respond to customer requests. Given that different services naturally have different response times, they asked me to analyze whether these times differ across branches.
 
-Calculate the average and maximum duration for each branch and service. Your output should include the columns `service_id`, `branch_id`, `avg_time_taken` and `max_time_taken`. Values should be rounded to two decimal places where appropriate. 
+### Task:
+I was tasked with calculating:
+The average time taken to respond to a customer request for each service and branch.
+The maximum time taken to respond to a request for each service and branch. The output needed to include the following columns:
+service_id: The unique identifier for the service provided.
+branch_id: The identifier for the hotel branch.
+avg_time_taken: The average time taken to respond to a customer request, rounded to two decimal places.
+max_time_taken: The maximum time taken to respond to a customer request, also rounded to two decimal places.
 
+### Action:
+To complete this task:
+I used the AVG and MAX functions to calculate the average and maximum response times for each service and branch.
+I grouped the data by service_id and branch_id to ensure that the calculations were done separately for each service in each branch.
+I used the ROUND function to ensure the times were rounded to two decimal places, as required.
 
-```python
--- Write your query for task 2 in this cell
+Here’s the query:
+
+```sql
 SELECT
 	service_id,
 	branch_id,
@@ -223,9 +247,8 @@ FROM request
 GROUP BY service_id,
 		 branch_id;
 ```
-
-
-
+### Result:
+The query returned the average and maximum response times for each service in each branch, providing the Head of Operations with valuable insights into whether certain branches take longer to respond to customer requests. This analysis will allow the operations team to identify where improvements can be made to enhance customer service across different locations.
 
 <div>
 <style scoped>
@@ -336,17 +359,30 @@ GROUP BY service_id,
 
 
 
-## Task 3
+## **Focusing on Meal and Laundry Services in Key Regions**
 
-The management team want to target improvements in `Meal` and `Laundry` service in Europe (`EMEA`) and Latin America (`LATAM`). 
+### Situation:
+The management team at LuxurStay Hotels wants to focus on improving the Meal and Laundry services in their branches located in Europe (EMEA) and Latin America (LATAM). They are specifically interested in reviewing the service descriptions, branch details, and customer ratings in these regions to determine where enhancements are needed.
 
-Write a query to return the `description` of the service, the `id` and `location` of the branch, the id of the request as `request_id` and the `rating` for the services and locations of interest to the management team. 
+### Task:
+I was asked to retrieve the following details for services and branches of interest:
+description: The description of the service (either Meal or Laundry).
+id: The unique identifier of the branch.
+location: The region where the branch is located (either EMEA or LATAM).
+request_id: The ID associated with the service request.
+rating: The customer rating for the service provided.
+The goal was to use the original branch table to identify relevant data.
 
-Use the original branch table, not the output of task 1. 
+### Action:
+To complete this task:
+I wrote a query that filtered the data to include only Meal and Laundry services.
+I further filtered the results to include only branches located in EMEA and LATAM.
+I selected the relevant columns to match the management team's requirements.
+I ensured the query pulled data from the original branch table, as specified.
 
+Here’s the query:
 
-```python
--- Write your query for task 3 in this cell
+```sql
 SELECT
 	s.description as description,
 	b.id as id,
@@ -362,9 +398,8 @@ WHERE 1=1
 	AND (s.description = 'Meal' or s.description = 'Laundry')
 	AND (b.location = 'EMEA' or b.location = 'LATAM');
 ```
-
-
-
+### Result:
+The query successfully returned a list of Meal and Laundry service requests from branches located in Europe (EMEA) and Latin America (LATAM). This data gave the management team clear insight into the performance of these services and helped them identify areas needing improvement.
 
 <div>
 <style scoped>
@@ -486,16 +521,27 @@ WHERE 1=1
 </div>
 
 
+## **Identifying Low-Performing Hotels**
 
-## Task 4
+### Situation:
+The management at LuxurStay Hotels has set a target for customer satisfaction, aiming for an average rating of 4.5 or higher. However, there are some hotels where the average rating is falling below this target, and the operations team wants to identify which branch and service combinations are underperforming.
 
-So that you can take a more detailed look at the lowest performing hotels, you want to get service and branch information where the average rating for the branch and service combination is lower than 4.5 - the target set by management.  
+### Task:
+I was tasked with retrieving the following information for services and branches that have an average rating lower than the target:
+service_id: The unique identifier for the service.
+branch_id: The unique identifier for the hotel branch.
+avg_rating: The average rating for the service and branch combination, rounded to 2 decimal places.
+The goal was to focus on services and branches where the average rating is below 4.5.
 
-Your query should return the `service_id` and `branch_id`, and the average rating (`avg_rating`), rounded to 2 decimal places.
+### Action:
+To address this task, I:
+Wrote a query to calculate the average rating for each combination of service and branch.
+Filtered the data to include only those combinations where the average rating is below 4.5.
+Ensured that the results were rounded to two decimal places for clarity.
 
+Here’s the query:
 
-```python
--- Write your query for task 4 in this cell
+```sql
 SELECT
 	r.service_id as service_id,
 	r.branch_id as branch_id,
@@ -510,7 +556,8 @@ HAVING
 	AVG(r.rating) < 4.5;
 ```
 
-
+### Result:
+The query successfully returned the list of services and branches where the average rating was below the target of 4.5. This data allowed the operations team to identify underperforming hotels and focus on improving customer satisfaction at these locations.
 
 
 <div>
