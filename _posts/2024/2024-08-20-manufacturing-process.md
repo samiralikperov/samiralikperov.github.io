@@ -3,7 +3,7 @@ title: Manufacturing processes
 date: 2024-09-10 18:00:00
 layout: post
 categories: [SQL]
-tags: [DATA ANALYSIS,BUSINESS PROCESS, MANUFACTURING]
+tags: [DATA ANALYSIS,BUSINESS PROCESS]
 image:
   path: assets/img/headers/post_3.png
   alt: Manufacturing processes
