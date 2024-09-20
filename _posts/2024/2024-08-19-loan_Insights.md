@@ -1,45 +1,56 @@
 ---
 title: Loan Insights
-date: 2024-08-20 18:00:00
+date: 2024-08-19 18:00:00
 layout: post
-categories: [SQL,EDA]
-tags: [DATA ANALYSIS,FINANCE,BANK,LOAN]
+categories: [SQL]
+tags: [DATA ANALYSIS, LOAN]
 image:
   path: assets/img/headers/post_1.png
   alt: Loan Insights
 ---
 
+For this project, I had to work with EasyLoan, a company that offers a variety of loan services, including personal loans, car loans, and mortgages. EasyLoan operates in several markets, including Canada, the United Kingdom, and the United States.
 
-## Introduction: Loan Insights
-
-EasyLoan offers a wide range of loan services, including personal loans, car loans, and mortgages.
-EasyLoan offers loans to clients from Canada, United Kingdom and United States.
-The analytics team wants to report performance across different geographic areas. They aim to identify areas of strength and weakness for the business strategy team.
-They need your help to ensure the data is accessible and reliable before they start reporting.
+The analytics team is responsible for reporting on the performance of these services across different regions. My task was to ensure the data was accessible and reliable before the team began analyzing and preparing reports for the strategy department.
 
 **Database Schema**  
 ![lending](/assets/img/pictures/lending_1.png)
 
-## Task 1 
+To learn more about me and my work, expand the ABOUT ME section.
 
-The analytics team wants to use the `client` table to create a dashboard for client details. For them to proceed, they need to be sure the data is clean enough to use.
+<details>
+  <summary style="font-size: 24px; font-weight: bold; cursor: pointer;">ABOUT ME</summary>
+  
+  Learn more about me on my <a href="https://samiralikperov.github.io/about/" target="_blank">ABOUT</a> page. Below, you can find links to explore more of my projects categorized by topics, access my resume, and contact me.
 
-The `client` table below illustrates what the analytics team expects the data types and format to be.
+  <br>
 
-Write a query that makes the `client` table match the description provided. Your query should not update the `client` table.
+  | <a href="https://samiralikperov.github.io/categories/" target="_blank"><strong>PROJECTS</strong></a> | <a href="https://docs.google.com/document/d/1BEL5l5ZnlTdJc5OKiuH1SkiMQf6hS6HRAZUZvlrRANM/edit#heading=h.ifsro82jsgea" target="_blank"><strong>RESUME</strong></a> | <a href="https://www.linkedin.com/in/samiralikperov/" target="_blank"><strong>CONTACT</strong></a> |
+</details>
 
-| Column Name       | Description                                                      |
-|-------------------|------------------------------------------------------------------|
-| client_id         | Unique integer (set by the database, can’t take any other value) |
-| date\_of\_birth       | Date of birth of the client, as a date  (format: YYYY-MM-DD)                              |
-| employment_status        | Current employment status of the client, either employed or unemployed, as a lower case string                              |
-| country          | The country where the client resides, either USA, UK or CA, as an upper case string                      |
+## **Cleaning Client Data for the Analytics Dashboard**
 
+### Situation:
+The analytics team at EasyLoan wanted to create a dashboard that provided detailed client information. However, they needed to ensure that the data in the `client` table met their expectations in terms of format and accuracy before they could proceed with the dashboard.
+
+### Task:
+I was assigned the task of writing a query to clean and format the `client` data to match the specific requirements. This involved:
+- Ensuring the `date_of_birth` field is in the correct format (`YYYY-MM-DD`).
+- Cleaning the `employment_status` field so that it only contains "employed" or "unemployed" in lowercase.
+- Ensuring the `country` field is correctly listed as either "USA," "UK," or "CA" in uppercase.
+
+### Action:
+To achieve the task, I created a SQL query that:
+1. Checked the format of the `date_of_birth` column and converted any incorrect formats to `YYYY-MM-DD`.
+2. Standardized the `employment_status` column by converting all employment-related statuses to either "employed" or "unemployed," defaulting unknown values to "unknown."
+3. Standardized the `country` column to only accept "USA," "UK," or "CA" in uppercase and replaced any invalid country values with "UNKNOWN."
+
+Here’s the query:
 
 ```sql
 SELECT
-	client_id,
-	CASE
+    client_id,
+    CASE
         WHEN date_of_birth ~ '^\d{4}-\d{2}-\d{2}T' THEN date_of_birth
         ELSE TO_CHAR(TO_DATE(date_of_birth, 'Month DD, YYYY'), 'YYYY-MM-DD')
     END AS date_of_birth,
@@ -55,7 +66,8 @@ SELECT
 FROM 
     client;
 ```
-
+### Result:
+The query successfully standardized the client data by cleaning the format for date_of_birth, employment_status, and country, making the data ready for the analytics dashboard. This allowed the team to move forward with creating the client insights dashboard.
 
 <div>
 <style scoped>
@@ -164,19 +176,28 @@ FROM
 <p>300 rows × 4 columns</p>
 </div>
 
-## Task 2
+## **Filling in Missing Repayment Channels**
 
-You have been told that there was a problem in the backend system as some of the `repayment_channel` values are missing. 
 
-The missing values are critical to the analysis so they need to be filled in before proceeding.
+### Situation:
+The backend system experienced an issue, causing some values in the repayment_channel column to be missing. These missing values are critical to the analysis of loan repayments, and they need to be filled before proceeding with further analysis. Fortunately, a pattern has been identified for the missing values, which allows us to derive the repayment channel based on the repayment_amount.
 
-Luckily, they have discovered a pattern in the missing values:
+### Task:
+I was tasked with writing a query that would fill in the missing or invalid repayment channel values based on the following criteria:
 
-- Repayment higher than 4000 dollars should be made via `bank account`.
-- Repayment lower than 1000 dollars should be made via `mail`.
+Repayments higher than 4000 dollars should be made via bank account.
+Repayments lower than 1000 dollars should be made via mail.
 
-Write a query that makes the `repayment` table match this criteria.
+### Action:
+To address this task, I created a query that:
 
+Checks for rows where repayment_channel is either missing (NULL) or contains invalid values ('-').
+Fills in the missing values based on the repayment amount:
+If the repayment_amount is greater than 4000, the repayment channel is set to 'bank account'.
+If the repayment_amount is less than 1000, the repayment channel is set to 'mail'.
+Returns the updated values of the repayment_channel while leaving other valid entries unchanged.
+
+Here’s the query:
 
 ```sql
 SELECT
@@ -192,6 +213,11 @@ SELECT
 FROM
 	repayment;
 ```
+
+### Result:
+The query successfully identified and replaced the missing or invalid repayment channel values with the appropriate repayment method, ensuring that the repayment table adheres to the required criteria.
+
+
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -311,15 +337,28 @@ FROM
 <p>1500 rows × 5 columns</p>
 </div>
 
-## Task 3
-
-Starting on January 1st, 2022, all US clients started to use an online system to sign contracts.
-
-The analytics team wants to analyze the loans for US clients who used the new online system.
-
-Write a query that returns the data for the analytics team. Your output should include `client_id`,`contract_date`, `principal_amount` and `loan_type` columns.
+## **Analyzing Loans for US Clients Using the Online Contract System**
 
 
+### Situation:
+As of January 1st, 2022, all US clients began using an online system to sign contracts. The analytics team needs to analyze loan data specifically for US clients who used this new system, in order to gain insights on how it has impacted loan agreements.
+
+### Task:
+I was tasked with writing a query that retrieves the relevant loan data for US clients who signed their contracts using the new online system starting from January 1st, 2022. The output should include the following columns:
+
+client_id: The unique identifier for the client.
+contract_date: The date the contract was signed.
+principal_amount: The amount of the loan's principal.
+loan_type: The type of loan taken by the client.
+
+### Action:
+To fulfill the task, I created a query that:
+
+Filters the data to include only rows where the contract_date is on or after January 1st, 2022.
+Restricts the results to clients who reside in the USA.
+Selects the relevant columns: client_id, contract_date, principal_amount, and loan_type.
+
+Here’s the query:
 ```sql
 SELECT
     c.client_id,
@@ -336,6 +375,9 @@ WHERE
     c.country = 'USA'
     AND ct.contract_date >= '2022-01-01';
 ```
+### Result:
+The query successfully retrieved loan data for US clients who used the online contract system starting from January 1st, 2022, providing the analytics team with the necessary information for their analysis.
+
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -443,13 +485,25 @@ WHERE
 <p>94 rows × 4 columns</p>
 </div>
 
-## Task 4
+## Comparing Interest Rates Across Countries for Different Loan Types
 
-The business strategy team is considering offering a more competitive rate to the US market. 
+### Situation:
+The business strategy team is considering offering more competitive interest rates to the US market. To support this initiative, the analytics team wants to compare the average interest rates for each loan type across different countries. This comparison will help determine if there are significant differences in the interest rates offered in the US compared to other countries.
 
-The analytic team want to compare the average interest rates offered by the company for the same loan type in different countries to determine if there are significant differences.
+### Task:
+I was tasked with writing a query that retrieves the average interest rates for each loan type, broken down by country. The output should include:
+loan_type: The type of loan being offered.
+country: The country where the loan was offered.
+avg_rate: The average interest rate for the corresponding loan type and country.
 
-Write a query that returns the data for the analytics team. Your output should include `loan_type`, `country` and `avg_rate` columns.
+
+### Action:
+To address this task, I wrote a query that:
+Groups the data by loan_type and country.
+Calculates the average interest rate (avg_rate) for each combination of loan type and country using the AVG() function.
+Selects the relevant columns: loan_type, country, and avg_rate.
+
+Here’s the query:
 
 ```sql
 SELECT
@@ -463,6 +517,8 @@ JOIN
 GROUP BY l.loan_type, c.country
 ORDER BY l.loan_type, c.country;
 ```
+### Result:
+The query successfully provided the analytics team with the average interest rates for each loan type across different countries, enabling them to compare rates and support the business strategy team's decision-making process.
 
 <div>
 <style scoped>
