@@ -24,10 +24,8 @@ To learn more about me and my work, expand the ABOUT ME section.
   Learn more about me on my <a href="https://samiralikperov.github.io/about/" target="_blank">ABOUT</a> page. Below, you can find links to explore more of my projects categorized by topics, access my resume, and contact me.
 
   <br>
-
-  | PROJECTS | RESUME | CONTACT |
-  |----------|--------|---------|
-  |[All my best projects by category](https://samiralikperov.github.io/categories/)| [Explore my expertise and experience](https://docs.google.com/document/d/1BEL5l5ZnlTdJc5OKiuH1SkiMQf6hS6HRAZUZvlrRANM/edit#heading=h.ifsro82jsgea)|[Get in touch with me via LinkedIn](https://www.linkedin.com/in/samiralikperov/)|
+ | <a href="https://samiralikperov.github.io/categories/" target="_blank"><strong>PROJECTS</strong></a> | <a href="https://docs.google.com/document/d/1BEL5l5ZnlTdJc5OKiuH1SkiMQf6hS6HRAZUZvlrRANM/edit#heading=h.ifsro82jsgea" target="_blank"><strong>RESUME</strong></a> | <a href="https://www.linkedin.com/in/samiralikperov/" target="_blank"><strong>CONTACT</strong></a> |
+</details>
 
 </details>
 
