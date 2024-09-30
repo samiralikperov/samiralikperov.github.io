@@ -12,7 +12,21 @@ image:
 
 ## LeetCode SQL - Top 50 SQL Questions
 
-Welcome to my GitHub Page for the **Top 50 SQL Questions** from LeetCode! This repository showcases my solutions to a curated selection of SQL problems, ranging from beginner to intermediate levels. Each question covers various SQL concepts and queries to help solidify your understanding.
+I decided to take on this challenge over a few days to test my knowledge. You can find the challenge at [this link](https://leetcode.com/studyplan/top-sql-50/). This collection showcases my solutions to a curated selection of SQL problems, ranging from beginner to intermediate levels. Each question covers various SQL concepts and queries to help solidify my understanding.
+
+
+To learn more about me and my work, expand the ABOUT ME section.
+
+<details>
+  <summary style="font-size: 24px; font-weight: bold; cursor: pointer;">ABOUT ME</summary>
+  
+  Learn more about me on my <a href="https://samiralikperov.github.io/about/" target="_blank">ABOUT</a> page. Below, you can find links to explore more of my projects categorized by topics, access my resume, and contact me.
+
+  <br>
+
+  | <a href="https://samiralikperov.github.io/categories/" target="_blank"><strong>PROJECTS</strong></a> | <a href="https://docs.google.com/document/d/1BEL5l5ZnlTdJc5OKiuH1SkiMQf6hS6HRAZUZvlrRANM/edit#heading=h.ifsro82jsgea" target="_blank"><strong>RESUME</strong></a> | <a href="https://www.linkedin.com/in/samiralikperov/" target="_blank"><strong>CONTACT</strong></a> |
+</details>
+
 
 ## What You'll Find Here
 
