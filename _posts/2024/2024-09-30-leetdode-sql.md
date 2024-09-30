@@ -1,12 +1,12 @@
 ---
-title: LeetCode Top 50 SQL Questions
-date: 2024-09-30 18:00:00
+title: LeetCode SQL
+date: 2024-09-29 18:00:00
 layout: post
 categories: [SQL]
 tags: [DATA ANALYSIS]
 image:
   path: assets/img/headers/post_5.png
-  alt: LeetCode SQL - Top 50 SQL Questions
+  alt: LeetCode SQL
 ---
 
 
