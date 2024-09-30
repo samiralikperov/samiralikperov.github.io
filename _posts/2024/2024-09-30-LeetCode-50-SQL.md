@@ -22,8 +22,7 @@ Each solution includes:
 - **Explanation**: A brief summary of the approach and thought process behind the solution.
 
 
-<details>
-  <summary><strong>SELECT</strong></summary>
+## SELECT
 
 <details>
   <summary> 1757. Recyclable and Low Fat Products</summary> 
@@ -242,25 +241,9 @@ Each solution includes:
 > - This ensures that only the IDs of invalid tweets are returned.
 
 </details>
-</details>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<details>
-  <summary><strong>BASIC JOINS</strong></summary>
+## BASIC JOINS
 
 <details>
   <summary> 1378. Replace Employee ID With The Unique Identifier</summary> 
@@ -765,14 +748,12 @@ Each solution includes:
 > - The `LEFT JOIN` ensures that users who did not request any confirmation messages still appear with a confirmation rate of 0.
 >  
 </details>
-</details>
 
 
 
 
+## BASIC AGGREGATE FUNCTIONS
 
-<details>
-  <summary><strong>BASIC AGGREGATE FUNCTIONS</strong></summary>
   <details>
   <summary>620. Not Boring Movies</summary>  
 
@@ -1217,7 +1198,6 @@ Each solution includes:
 > - The result is rounded to 2 decimal places to match the expected output.  
 >  
 </details>
-</details>
 
 
 
@@ -1234,8 +1214,8 @@ Each solution includes:
 
 
 
-<details>
-  <summary><strong>SORTING AND GROUPING</strong></summary>
+
+## SORTING AND GROUPING
 
 <details>
   <summary>2356. Number of Unique Subjects Taught by Each Teacher</summary>  
@@ -1562,7 +1542,6 @@ Each solution includes:
 > - It compares this count to the total number of products in the Product table to determine if the customer bought all products.  
 
 </details>
-</details>
 
 
 
@@ -1580,8 +1559,7 @@ Each solution includes:
 
 
 
-<details>
-  <summary><strong>ADVANCED SELECT AND JOINS</strong></summary>
+## ADVANCED SELECT AND JOINS
 
 <details>
   <summary>1731. The Number of Employees Which Report to Each Employee</summary>  
@@ -1939,7 +1917,6 @@ Each solution includes:
 > - Each category is represented in the result set, ensuring that all categories are included regardless of whether there are any accounts in that category.  
 
 </details>
-</details>
 
 
 
@@ -1954,8 +1931,8 @@ Each solution includes:
 
 
 
-<details>
-  <summary><strong>SUBQUERIES</strong></summary>
+
+## SUBQUERIES
 
 <details>
   <summary>1978. Employees Whose Manager Left the Company</summary>  
@@ -2360,10 +2337,9 @@ Each solution includes:
 > - It selects the top three unique salaries for each department and returns the corresponding employee names and salaries.  
 
 </details>
-</details>
 
-<details>
-  <summary><strong>ADVANCED STRING FUNCTION/REGEX/CLAUSE</strong></summary>
+
+## ADVANCED STRING FUNCTION/REGEX/CLAUSE
 
 <details>
   <summary>1667. Fix Names in a Table</summary>  
@@ -2682,13 +2658,5 @@ Output
 > **Explanation:**  
 > - The query uses a regular expression to filter valid email addresses based on the specified rules for the prefix name and domain.  
 > - It retrieves all user information for those with valid emails matching the criteria.  
-
-</details>
-
-
-
-
-
-
 
 </details>
