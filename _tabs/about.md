@@ -3,12 +3,15 @@
 icon: fas fa-info-circle
 order: 4
 ---
-Hi, my name is Samir!
+![About](/assets/img/headers/About.png)
 
-Passionate about data and finance. Keenly studying data analysis, data engineering, machine learning, and financial analytics. 
-Excited to publish projects on GitHub and share ideas with the community. My expertise spans sales planning, forecasting, data analysis, visualization, and employee motivation, all strategically focused on enhancing operational processes and financial outcomes through detailed modeling of products and budgets.
+I specialize in developing methodologies and models that drive strategic sales planning, forecasting, and employee motivation. My expertise lies in leveraging advanced data analysis to manage budgets effectively and optimize business functions.
 
-[**Resume: Click to explore my expertise!**](https://docs.google.com/document/d/1BEL5l5ZnlTdJc5OKiuH1SkiMQf6hS6HRAZUZvlrRANM/edit?usp=sharing)
+I am committed to using data analytics not just to improve processes, but to uncover new growth opportunities and enhance profitability. My focus is on turning data into actionable insights that empower teams and drive impactful decision-making.
+
+[**Resume: Click to explore my expertise!**](https://docs.google.com/document/d/1BEL5l5ZnlTdJc5OKiuH1SkiMQf6hS6HRAZUZvlrRANM/edit?usp=sharing)  
+[**Projects: Click to explore my projects organized by category!**](https://samiralikperov.github.io/categories/)
+
 
 <h2>PROFESSIONAL FUNCTION</h2>
 <ul>
