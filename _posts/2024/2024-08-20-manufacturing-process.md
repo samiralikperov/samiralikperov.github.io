@@ -1,6 +1,6 @@
 ---
 title: Manufacturing processes
-date: 2024-09-10 18:00:00
+date: 2024-09-30 18:00:00
 layout: post
 categories: [SQL]
 tags: [DATA ANALYSIS,BUSINESS PROCESS]
