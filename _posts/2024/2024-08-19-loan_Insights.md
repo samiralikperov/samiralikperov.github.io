@@ -1,6 +1,6 @@
 ---
 title: Loan Insights
-date: 2024-08-19 18:00:00
+date: 2024-09-16 18:00:00
 layout: post
 categories: [SQL]
 tags: [DATA ANALYSIS, LOAN]
