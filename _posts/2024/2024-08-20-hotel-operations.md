@@ -1,6 +1,6 @@
 ---
 title: Hotel Operations
-date: 2024-09-23 18:00:00
+date: 2024-09-24 18:00:00
 layout: post
 categories: [SQL]
 tags: [DATA ANALYSIS,OPERATIONS MANAGEMENT]
