@@ -93,6 +93,9 @@ I am committed to using data analytics not just to improve processes, but to unc
 </style>
 
 <div class="image-grid">
+  <img src="/assets/img/certif/cfi_bida.png" alt="CFI BIDA">
+  <img src="/assets/img/certif/cfi_bia.png" alt="CFI Business Intelligence Analyst">
+  <img src="/assets/img/certif/cfi_da.png" alt="CFI Data Analysis in Excel">
   <img src="/assets/img/certif/dc_daa.jpg" alt="DC Data Analysis">
   <img src="/assets/img/certif/dc_dea.jpg" alt="DC DEA">
   <img src="/assets/img/certif/dc_sql.jpg" alt="DC SQL">
