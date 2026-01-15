@@ -9,7 +9,7 @@ I specialize in developing methodologies and models that drive strategic sales p
 
 I am committed to using data analytics not just to improve processes, but to uncover new growth opportunities and enhance profitability. My focus is on turning data into actionable insights that empower teams and drive impactful decision-making.
 
-[**Projects: Click to explore my projects organized by category!**](https://samiralikperov.github.io/categories/)
+[**Projects: Click to explore my projects organized by category!**](https://samiralikperov.github.io/categories/)  
 [**Portfolio site: dashboards, data projects, and results**](https://rebrand.ly/analystsamir)
 
 
